@@ -6,6 +6,8 @@ apt-get -y install nginx
 
 BINDIR=$(dirname "$0")
 
+mkdir -p "$1"
+
 if [[ ! -f $1/nginx.conf.erb ]]; then
         cp $BINDIR/../conf/nginx.conf.erb $1/nginx.conf.erb
 fi
